@@ -10,19 +10,97 @@
 		795F7E66230D32BE00C7A50C /* SmartSocial.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E64230D32BE00C7A50C /* SmartSocial.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		795F7E70230D4A9D00C7A50C /* SSContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E6E230D4A9D00C7A50C /* SSContext.h */; };
 		795F7E71230D4A9D00C7A50C /* SSContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E6F230D4A9D00C7A50C /* SSContext.m */; };
-		795F7E74230D4BCA00C7A50C /* SSPlatformConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E72230D4BCA00C7A50C /* SSPlatformConfiguration.h */; };
-		795F7E75230D4BCA00C7A50C /* SSPlatformConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E73230D4BCA00C7A50C /* SSPlatformConfiguration.m */; };
+		795F7E7A230E31C600C7A50C /* SSAbstractAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E78230E31C600C7A50C /* SSAbstractAdaptor.h */; };
+		795F7E7B230E31C600C7A50C /* SSAbstractAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E79230E31C600C7A50C /* SSAbstractAdaptor.m */; };
+		795F7E7E230E383C00C7A50C /* SSAuthCredential.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E7C230E383C00C7A50C /* SSAuthCredential.h */; };
+		795F7E7F230E383C00C7A50C /* SSAuthCredential.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E7D230E383C00C7A50C /* SSAuthCredential.m */; };
+		795F7E83230E3F0000C7A50C /* SSWechatAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E81230E3F0000C7A50C /* SSWechatAdaptor.h */; };
+		795F7E84230E3F0000C7A50C /* SSWechatAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E82230E3F0000C7A50C /* SSWechatAdaptor.m */; };
+		795F7E87230E7CBA00C7A50C /* SSPlatformConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E85230E7CBA00C7A50C /* SSPlatformConfiguration.m */; };
+		795F7E88230E7CBA00C7A50C /* SSPlatformConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E86230E7CBA00C7A50C /* SSPlatformConfiguration.h */; };
+		795F7E8B230E841E00C7A50C /* SSUserInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E89230E841E00C7A50C /* SSUserInfo.h */; };
+		795F7E8C230E841E00C7A50C /* SSUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E8A230E841E00C7A50C /* SSUserInfo.m */; };
+		795F7E90230E8A5100C7A50C /* UIImage+SSCompress.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E8E230E8A5100C7A50C /* UIImage+SSCompress.h */; };
+		795F7E91230E8A5100C7A50C /* UIImage+SSCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E8F230E8A5100C7A50C /* UIImage+SSCompress.m */; };
+		795F7E94230E8D0500C7A50C /* SSImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E92230E8D0500C7A50C /* SSImageDownloader.h */; };
+		795F7E95230E8D0500C7A50C /* SSImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E93230E8D0500C7A50C /* SSImageDownloader.m */; };
+		795F7E9D230EA3A400C7A50C /* SSFacebookAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E9B230EA3A300C7A50C /* SSFacebookAdaptor.h */; };
+		795F7E9E230EA3A400C7A50C /* SSFacebookAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7E9C230EA3A300C7A50C /* SSFacebookAdaptor.m */; };
+		795F7EA2230EBAC500C7A50C /* SSWeiboAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EA0230EBAC500C7A50C /* SSWeiboAdaptor.h */; };
+		795F7EA3230EBAC500C7A50C /* SSWeiboAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EA1230EBAC500C7A50C /* SSWeiboAdaptor.m */; };
+		795F7EA7230F83B500C7A50C /* SSWhatsAppAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EA5230F83B500C7A50C /* SSWhatsAppAdaptor.h */; };
+		795F7EA8230F83B500C7A50C /* SSWhatsAppAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EA6230F83B500C7A50C /* SSWhatsAppAdaptor.m */; };
+		795F7EAC230F8BE300C7A50C /* SSQQAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EAA230F8BE300C7A50C /* SSQQAdaptor.h */; };
+		795F7EAD230F8BE300C7A50C /* SSQQAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EAB230F8BE300C7A50C /* SSQQAdaptor.m */; };
+		795F7EAF230F8C7A00C7A50C /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795F7EAE230F8C7A00C7A50C /* TencentOpenAPI.framework */; };
+		795F7EB3230F992C00C7A50C /* SSTwitchAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EB1230F992C00C7A50C /* SSTwitchAdaptor.h */; };
+		795F7EB4230F992C00C7A50C /* SSTwitchAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EB2230F992C00C7A50C /* SSTwitchAdaptor.m */; };
+		795F7EB7230F9BC000C7A50C /* SSWebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EB5230F9BC000C7A50C /* SSWebViewController.h */; };
+		795F7EB8230F9BC000C7A50C /* SSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EB6230F9BC000C7A50C /* SSWebViewController.m */; };
+		795F7EBC230FBB7B00C7A50C /* SSGoogleAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EBA230FBB7B00C7A50C /* SSGoogleAdaptor.h */; };
+		795F7EBD230FBB7B00C7A50C /* SSGoogleAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EBB230FBB7B00C7A50C /* SSGoogleAdaptor.m */; };
+		795F7EC1230FC2DC00C7A50C /* SSInstagramAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EBF230FC2DC00C7A50C /* SSInstagramAdaptor.h */; };
+		795F7EC2230FC2DC00C7A50C /* SSInstagramAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EC0230FC2DC00C7A50C /* SSInstagramAdaptor.m */; };
+		795F7EC6230FC9A800C7A50C /* SSTwitterAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EC4230FC9A800C7A50C /* SSTwitterAdaptor.h */; };
+		795F7EC7230FC9A800C7A50C /* SSTwitterAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7EC5230FC9A800C7A50C /* SSTwitterAdaptor.m */; };
+		795F7ECB230FDA1800C7A50C /* SSVKAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7EC9230FDA1800C7A50C /* SSVKAdaptor.h */; };
+		795F7ECC230FDA1800C7A50C /* SSVKAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7ECA230FDA1800C7A50C /* SSVKAdaptor.m */; };
+		795F7ED0230FE9F600C7A50C /* SSLineAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7ECE230FE9F600C7A50C /* SSLineAdaptor.h */; };
+		795F7ED1230FE9F600C7A50C /* SSLineAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7ECF230FE9F600C7A50C /* SSLineAdaptor.m */; };
+		795F7ED5230FEF8A00C7A50C /* SSRedditAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7ED3230FEF8A00C7A50C /* SSRedditAdaptor.h */; };
+		795F7ED6230FEF8A00C7A50C /* SSRedditAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7ED4230FEF8A00C7A50C /* SSRedditAdaptor.m */; };
+		8F60B2C069C43BF304DD1173 /* libPods-SmartSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0088FC141F09BB3AA60DD0 /* libPods-SmartSocial.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1040A6CBD7C5BD4957683760 /* Pods-SmartSocial.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSocial.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSocial/Pods-SmartSocial.release.xcconfig"; sourceTree = "<group>"; };
+		2E0088FC141F09BB3AA60DD0 /* libPods-SmartSocial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmartSocial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		795F7E61230D32BE00C7A50C /* SmartSocial.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmartSocial.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		795F7E64230D32BE00C7A50C /* SmartSocial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartSocial.h; sourceTree = "<group>"; };
 		795F7E65230D32BE00C7A50C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		795F7E6C230D339F00C7A50C /* SSInterfaces.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSInterfaces.h; sourceTree = "<group>"; };
 		795F7E6E230D4A9D00C7A50C /* SSContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSContext.h; sourceTree = "<group>"; };
 		795F7E6F230D4A9D00C7A50C /* SSContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSContext.m; sourceTree = "<group>"; };
-		795F7E72230D4BCA00C7A50C /* SSPlatformConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSPlatformConfiguration.h; sourceTree = "<group>"; };
-		795F7E73230D4BCA00C7A50C /* SSPlatformConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSPlatformConfiguration.m; sourceTree = "<group>"; };
+		795F7E78230E31C600C7A50C /* SSAbstractAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAbstractAdaptor.h; sourceTree = "<group>"; };
+		795F7E79230E31C600C7A50C /* SSAbstractAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAbstractAdaptor.m; sourceTree = "<group>"; };
+		795F7E7C230E383C00C7A50C /* SSAuthCredential.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSAuthCredential.h; sourceTree = "<group>"; };
+		795F7E7D230E383C00C7A50C /* SSAuthCredential.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSAuthCredential.m; sourceTree = "<group>"; };
+		795F7E81230E3F0000C7A50C /* SSWechatAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWechatAdaptor.h; sourceTree = "<group>"; };
+		795F7E82230E3F0000C7A50C /* SSWechatAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWechatAdaptor.m; sourceTree = "<group>"; };
+		795F7E85230E7CBA00C7A50C /* SSPlatformConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPlatformConfiguration.m; sourceTree = "<group>"; };
+		795F7E86230E7CBA00C7A50C /* SSPlatformConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPlatformConfiguration.h; sourceTree = "<group>"; };
+		795F7E89230E841E00C7A50C /* SSUserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSUserInfo.h; sourceTree = "<group>"; };
+		795F7E8A230E841E00C7A50C /* SSUserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSUserInfo.m; sourceTree = "<group>"; };
+		795F7E8E230E8A5100C7A50C /* UIImage+SSCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+SSCompress.h"; sourceTree = "<group>"; };
+		795F7E8F230E8A5100C7A50C /* UIImage+SSCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SSCompress.m"; sourceTree = "<group>"; };
+		795F7E92230E8D0500C7A50C /* SSImageDownloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSImageDownloader.h; sourceTree = "<group>"; };
+		795F7E93230E8D0500C7A50C /* SSImageDownloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSImageDownloader.m; sourceTree = "<group>"; };
+		795F7E9B230EA3A300C7A50C /* SSFacebookAdaptor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFacebookAdaptor.h; sourceTree = "<group>"; };
+		795F7E9C230EA3A300C7A50C /* SSFacebookAdaptor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFacebookAdaptor.m; sourceTree = "<group>"; };
+		795F7EA0230EBAC500C7A50C /* SSWeiboAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWeiboAdaptor.h; sourceTree = "<group>"; };
+		795F7EA1230EBAC500C7A50C /* SSWeiboAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWeiboAdaptor.m; sourceTree = "<group>"; };
+		795F7EA5230F83B500C7A50C /* SSWhatsAppAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWhatsAppAdaptor.h; sourceTree = "<group>"; };
+		795F7EA6230F83B500C7A50C /* SSWhatsAppAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWhatsAppAdaptor.m; sourceTree = "<group>"; };
+		795F7EAA230F8BE300C7A50C /* SSQQAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSQQAdaptor.h; sourceTree = "<group>"; };
+		795F7EAB230F8BE300C7A50C /* SSQQAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSQQAdaptor.m; sourceTree = "<group>"; };
+		795F7EAE230F8C7A00C7A50C /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		795F7EB1230F992C00C7A50C /* SSTwitchAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTwitchAdaptor.h; sourceTree = "<group>"; };
+		795F7EB2230F992C00C7A50C /* SSTwitchAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTwitchAdaptor.m; sourceTree = "<group>"; };
+		795F7EB5230F9BC000C7A50C /* SSWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSWebViewController.h; sourceTree = "<group>"; };
+		795F7EB6230F9BC000C7A50C /* SSWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSWebViewController.m; sourceTree = "<group>"; };
+		795F7EBA230FBB7B00C7A50C /* SSGoogleAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSGoogleAdaptor.h; sourceTree = "<group>"; };
+		795F7EBB230FBB7B00C7A50C /* SSGoogleAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSGoogleAdaptor.m; sourceTree = "<group>"; };
+		795F7EBF230FC2DC00C7A50C /* SSInstagramAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSInstagramAdaptor.h; sourceTree = "<group>"; };
+		795F7EC0230FC2DC00C7A50C /* SSInstagramAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSInstagramAdaptor.m; sourceTree = "<group>"; };
+		795F7EC4230FC9A800C7A50C /* SSTwitterAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTwitterAdaptor.h; sourceTree = "<group>"; };
+		795F7EC5230FC9A800C7A50C /* SSTwitterAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTwitterAdaptor.m; sourceTree = "<group>"; };
+		795F7EC9230FDA1800C7A50C /* SSVKAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSVKAdaptor.h; sourceTree = "<group>"; };
+		795F7ECA230FDA1800C7A50C /* SSVKAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSVKAdaptor.m; sourceTree = "<group>"; };
+		795F7ECE230FE9F600C7A50C /* SSLineAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSLineAdaptor.h; sourceTree = "<group>"; };
+		795F7ECF230FE9F600C7A50C /* SSLineAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSLineAdaptor.m; sourceTree = "<group>"; };
+		795F7ED3230FEF8A00C7A50C /* SSRedditAdaptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSRedditAdaptor.h; sourceTree = "<group>"; };
+		795F7ED4230FEF8A00C7A50C /* SSRedditAdaptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSRedditAdaptor.m; sourceTree = "<group>"; };
+		942D4F7D51ACDE01E534E898 /* Pods-SmartSocial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartSocial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartSocial/Pods-SmartSocial.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,17 +108,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F60B2C069C43BF304DD1173 /* libPods-SmartSocial.a in Frameworks */,
+				795F7EAF230F8C7A00C7A50C /* TencentOpenAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3092C174CDCF055A41D4011E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E0088FC141F09BB3AA60DD0 /* libPods-SmartSocial.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		795F7E57230D32BE00C7A50C = {
 			isa = PBXGroup;
 			children = (
 				795F7E63230D32BE00C7A50C /* SmartSocial */,
 				795F7E62230D32BE00C7A50C /* Products */,
+				F2B08DF172AA721F98AD3BCF /* Pods */,
+				3092C174CDCF055A41D4011E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +145,7 @@
 		795F7E63230D32BE00C7A50C /* SmartSocial */ = {
 			isa = PBXGroup;
 			children = (
+				795F7E8D230E8A3A00C7A50C /* Helper */,
 				795F7E76230D4F4700C7A50C /* Platform */,
 				795F7E6D230D4A3B00C7A50C /* Core */,
 				795F7E6C230D339F00C7A50C /* SSInterfaces.h */,
@@ -69,8 +160,6 @@
 			children = (
 				795F7E6E230D4A9D00C7A50C /* SSContext.h */,
 				795F7E6F230D4A9D00C7A50C /* SSContext.m */,
-				795F7E72230D4BCA00C7A50C /* SSPlatformConfiguration.h */,
-				795F7E73230D4BCA00C7A50C /* SSPlatformConfiguration.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -78,8 +167,159 @@
 		795F7E76230D4F4700C7A50C /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				795F7ED2230FEF7E00C7A50C /* Reddit */,
+				795F7ECD230FE9EB00C7A50C /* Line */,
+				795F7EC8230FDA0E00C7A50C /* VK */,
+				795F7EC3230FC99C00C7A50C /* Twitter */,
+				795F7EBE230FC2B100C7A50C /* Instagram */,
+				795F7EB9230FBB6100C7A50C /* Google */,
+				795F7EB0230F991F00C7A50C /* Twitch */,
+				795F7EA9230F8BD400C7A50C /* QQ */,
+				795F7EA4230F83A400C7A50C /* WhatsApp */,
+				795F7E9F230EBAB700C7A50C /* Weibo */,
+				795F7E96230EA18D00C7A50C /* Facebook */,
+				795F7E80230E3EE800C7A50C /* Wechat */,
+				795F7E78230E31C600C7A50C /* SSAbstractAdaptor.h */,
+				795F7E79230E31C600C7A50C /* SSAbstractAdaptor.m */,
+				795F7E7C230E383C00C7A50C /* SSAuthCredential.h */,
+				795F7E7D230E383C00C7A50C /* SSAuthCredential.m */,
+				795F7E86230E7CBA00C7A50C /* SSPlatformConfiguration.h */,
+				795F7E85230E7CBA00C7A50C /* SSPlatformConfiguration.m */,
+				795F7E89230E841E00C7A50C /* SSUserInfo.h */,
+				795F7E8A230E841E00C7A50C /* SSUserInfo.m */,
 			);
 			path = Platform;
+			sourceTree = "<group>";
+		};
+		795F7E80230E3EE800C7A50C /* Wechat */ = {
+			isa = PBXGroup;
+			children = (
+				795F7E81230E3F0000C7A50C /* SSWechatAdaptor.h */,
+				795F7E82230E3F0000C7A50C /* SSWechatAdaptor.m */,
+			);
+			path = Wechat;
+			sourceTree = "<group>";
+		};
+		795F7E8D230E8A3A00C7A50C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				795F7E8E230E8A5100C7A50C /* UIImage+SSCompress.h */,
+				795F7E8F230E8A5100C7A50C /* UIImage+SSCompress.m */,
+				795F7E92230E8D0500C7A50C /* SSImageDownloader.h */,
+				795F7E93230E8D0500C7A50C /* SSImageDownloader.m */,
+				795F7EB5230F9BC000C7A50C /* SSWebViewController.h */,
+				795F7EB6230F9BC000C7A50C /* SSWebViewController.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		795F7E96230EA18D00C7A50C /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				795F7E9B230EA3A300C7A50C /* SSFacebookAdaptor.h */,
+				795F7E9C230EA3A300C7A50C /* SSFacebookAdaptor.m */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
+		795F7E9F230EBAB700C7A50C /* Weibo */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EA0230EBAC500C7A50C /* SSWeiboAdaptor.h */,
+				795F7EA1230EBAC500C7A50C /* SSWeiboAdaptor.m */,
+			);
+			path = Weibo;
+			sourceTree = "<group>";
+		};
+		795F7EA4230F83A400C7A50C /* WhatsApp */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EA5230F83B500C7A50C /* SSWhatsAppAdaptor.h */,
+				795F7EA6230F83B500C7A50C /* SSWhatsAppAdaptor.m */,
+			);
+			path = WhatsApp;
+			sourceTree = "<group>";
+		};
+		795F7EA9230F8BD400C7A50C /* QQ */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EAE230F8C7A00C7A50C /* TencentOpenAPI.framework */,
+				795F7EAA230F8BE300C7A50C /* SSQQAdaptor.h */,
+				795F7EAB230F8BE300C7A50C /* SSQQAdaptor.m */,
+			);
+			path = QQ;
+			sourceTree = "<group>";
+		};
+		795F7EB0230F991F00C7A50C /* Twitch */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EB1230F992C00C7A50C /* SSTwitchAdaptor.h */,
+				795F7EB2230F992C00C7A50C /* SSTwitchAdaptor.m */,
+			);
+			path = Twitch;
+			sourceTree = "<group>";
+		};
+		795F7EB9230FBB6100C7A50C /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EBA230FBB7B00C7A50C /* SSGoogleAdaptor.h */,
+				795F7EBB230FBB7B00C7A50C /* SSGoogleAdaptor.m */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
+		795F7EBE230FC2B100C7A50C /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EBF230FC2DC00C7A50C /* SSInstagramAdaptor.h */,
+				795F7EC0230FC2DC00C7A50C /* SSInstagramAdaptor.m */,
+			);
+			path = Instagram;
+			sourceTree = "<group>";
+		};
+		795F7EC3230FC99C00C7A50C /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EC4230FC9A800C7A50C /* SSTwitterAdaptor.h */,
+				795F7EC5230FC9A800C7A50C /* SSTwitterAdaptor.m */,
+			);
+			path = Twitter;
+			sourceTree = "<group>";
+		};
+		795F7EC8230FDA0E00C7A50C /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				795F7EC9230FDA1800C7A50C /* SSVKAdaptor.h */,
+				795F7ECA230FDA1800C7A50C /* SSVKAdaptor.m */,
+			);
+			path = VK;
+			sourceTree = "<group>";
+		};
+		795F7ECD230FE9EB00C7A50C /* Line */ = {
+			isa = PBXGroup;
+			children = (
+				795F7ECE230FE9F600C7A50C /* SSLineAdaptor.h */,
+				795F7ECF230FE9F600C7A50C /* SSLineAdaptor.m */,
+			);
+			path = Line;
+			sourceTree = "<group>";
+		};
+		795F7ED2230FEF7E00C7A50C /* Reddit */ = {
+			isa = PBXGroup;
+			children = (
+				795F7ED3230FEF8A00C7A50C /* SSRedditAdaptor.h */,
+				795F7ED4230FEF8A00C7A50C /* SSRedditAdaptor.m */,
+			);
+			path = Reddit;
+			sourceTree = "<group>";
+		};
+		F2B08DF172AA721F98AD3BCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				942D4F7D51ACDE01E534E898 /* Pods-SmartSocial.debug.xcconfig */,
+				1040A6CBD7C5BD4957683760 /* Pods-SmartSocial.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,8 +329,26 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				795F7E74230D4BCA00C7A50C /* SSPlatformConfiguration.h in Headers */,
+				795F7EAC230F8BE300C7A50C /* SSQQAdaptor.h in Headers */,
+				795F7E90230E8A5100C7A50C /* UIImage+SSCompress.h in Headers */,
+				795F7EC1230FC2DC00C7A50C /* SSInstagramAdaptor.h in Headers */,
+				795F7EA2230EBAC500C7A50C /* SSWeiboAdaptor.h in Headers */,
+				795F7EA7230F83B500C7A50C /* SSWhatsAppAdaptor.h in Headers */,
+				795F7ECB230FDA1800C7A50C /* SSVKAdaptor.h in Headers */,
+				795F7E88230E7CBA00C7A50C /* SSPlatformConfiguration.h in Headers */,
+				795F7EBC230FBB7B00C7A50C /* SSGoogleAdaptor.h in Headers */,
+				795F7ED5230FEF8A00C7A50C /* SSRedditAdaptor.h in Headers */,
+				795F7E83230E3F0000C7A50C /* SSWechatAdaptor.h in Headers */,
+				795F7EC6230FC9A800C7A50C /* SSTwitterAdaptor.h in Headers */,
+				795F7ED0230FE9F600C7A50C /* SSLineAdaptor.h in Headers */,
+				795F7E7E230E383C00C7A50C /* SSAuthCredential.h in Headers */,
+				795F7EB3230F992C00C7A50C /* SSTwitchAdaptor.h in Headers */,
 				795F7E70230D4A9D00C7A50C /* SSContext.h in Headers */,
+				795F7E7A230E31C600C7A50C /* SSAbstractAdaptor.h in Headers */,
+				795F7EB7230F9BC000C7A50C /* SSWebViewController.h in Headers */,
+				795F7E8B230E841E00C7A50C /* SSUserInfo.h in Headers */,
+				795F7E94230E8D0500C7A50C /* SSImageDownloader.h in Headers */,
+				795F7E9D230EA3A400C7A50C /* SSFacebookAdaptor.h in Headers */,
 				795F7E66230D32BE00C7A50C /* SmartSocial.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,10 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 795F7E69230D32BE00C7A50C /* Build configuration list for PBXNativeTarget "SmartSocial" */;
 			buildPhases = (
+				2232B0DA840E124086848EA4 /* [CP] Check Pods Manifest.lock */,
 				795F7E5C230D32BE00C7A50C /* Headers */,
 				795F7E5D230D32BE00C7A50C /* Sources */,
 				795F7E5E230D32BE00C7A50C /* Frameworks */,
 				795F7E5F230D32BE00C7A50C /* Resources */,
+				EA085A7937A2D31F9EC9D756 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -157,13 +417,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2232B0DA840E124086848EA4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SmartSocial-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA085A7937A2D31F9EC9D756 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartSocial/Pods-SmartSocial-resources.sh",
+				"${PODS_ROOT}/FBSDKCoreKit/FacebookSDKStrings.bundle",
+				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/LineSDK/LineSDKResource.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/VK-ios-sdk/VKSdkResources.bundle",
+				"${PODS_ROOT}/Weibo_SDK/libWeiboSDK/WeiboSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FacebookSDKStrings.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/LineSDKResource.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/VKSdkResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartSocial/Pods-SmartSocial-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		795F7E5D230D32BE00C7A50C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795F7E91230E8A5100C7A50C /* UIImage+SSCompress.m in Sources */,
+				795F7E7F230E383C00C7A50C /* SSAuthCredential.m in Sources */,
+				795F7EBD230FBB7B00C7A50C /* SSGoogleAdaptor.m in Sources */,
+				795F7E84230E3F0000C7A50C /* SSWechatAdaptor.m in Sources */,
+				795F7EB8230F9BC000C7A50C /* SSWebViewController.m in Sources */,
+				795F7EAD230F8BE300C7A50C /* SSQQAdaptor.m in Sources */,
+				795F7EC2230FC2DC00C7A50C /* SSInstagramAdaptor.m in Sources */,
+				795F7EC7230FC9A800C7A50C /* SSTwitterAdaptor.m in Sources */,
+				795F7E87230E7CBA00C7A50C /* SSPlatformConfiguration.m in Sources */,
 				795F7E71230D4A9D00C7A50C /* SSContext.m in Sources */,
-				795F7E75230D4BCA00C7A50C /* SSPlatformConfiguration.m in Sources */,
+				795F7ECC230FDA1800C7A50C /* SSVKAdaptor.m in Sources */,
+				795F7EB4230F992C00C7A50C /* SSTwitchAdaptor.m in Sources */,
+				795F7E8C230E841E00C7A50C /* SSUserInfo.m in Sources */,
+				795F7EA8230F83B500C7A50C /* SSWhatsAppAdaptor.m in Sources */,
+				795F7EA3230EBAC500C7A50C /* SSWeiboAdaptor.m in Sources */,
+				795F7E9E230EA3A400C7A50C /* SSFacebookAdaptor.m in Sources */,
+				795F7E95230E8D0500C7A50C /* SSImageDownloader.m in Sources */,
+				795F7ED6230FEF8A00C7A50C /* SSRedditAdaptor.m in Sources */,
+				795F7ED1230FE9F600C7A50C /* SSLineAdaptor.m in Sources */,
+				795F7E7B230E31C600C7A50C /* SSAbstractAdaptor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +620,7 @@
 		};
 		795F7E6A230D32BE00C7A50C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 942D4F7D51ACDE01E534E898 /* Pods-SmartSocial.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +630,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartSocial/Platform/QQ",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SmartSocial/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -318,6 +650,7 @@
 		};
 		795F7E6B230D32BE00C7A50C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1040A6CBD7C5BD4957683760 /* Pods-SmartSocial.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -327,6 +660,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SmartSocial/Platform/QQ",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = SmartSocial/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SSContext : NSObject<SSInterfaces>
 
++ (instancetype)shared;
+
+- (void)registerAdaptor:(id)adaptor forPlatform:(SSPlatform)platform channels:(NSArray<NSNumber *> *)channels;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -22,6 +22,9 @@ typedef NS_OPTIONS(NSInteger, SSPlatform) {
     SSPlatformInstagram  = 1 << 6,
     SSPlatformVK         = 1 << 7,
     SSPlatformTwitch     = 1 << 8,
+    SSPlatformWhatsApp   = 1 << 9,
+    SSPlatformLine       = 1 << 10,
+    SSPlatformReddit     = 1 << 11,
     SSPlatformAll        = NSIntegerMax
 };
 
@@ -36,6 +39,9 @@ typedef NS_ENUM (NSInteger, SSShareChannel) {
     SSShareChannelTwitter            = 7,
     SSShareChannelInstagram          = 8,
     SSShareChannelVK                 = 9,
+    SSShareChannelWhatsApp           = 10,
+    SSShareChannelLine               = 11,
+    SSShareChannelReddit             = 12,
 };
 
 typedef NS_ENUM(NSInteger, SSAuthPolicy) {
@@ -49,55 +55,84 @@ typedef NS_ENUM(NSUInteger, SSUserGender){
     SSUserGenderFemale  = 2,
 };
 
+typedef NS_ENUM(NSInteger, SSAuthErrorCode) {
+    SSAuthErrorCodeUnknown         = -1,
+    SSAuthErrorCodeCancelled       = -2,
+    SSAuthErrorCodeNotInstalled    = -3,
+    SSAuthErrorCodeBusy            = -4,
+    SSAuthErrorCodeNetwork         = -5,
+    SSAuthErrorCodeNotSupportted   = -5,
+};
+
+NS_ASSUME_NONNULL_BEGIN
+
+extern NSString * const SSScopesKey;
+
 /**
  * Share info, collection of all different platform
  */
-@protocol SSShareInfo <NSObject>
+@protocol ISSShareInfo <NSObject>
 /// Title
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong, nullable) NSString *title;
 /// Subtitle
-@property (nonatomic, strong) NSString *subTitle;
+@property (nonatomic, strong, nullable) NSString *subTitle;
 /// Text content
-@property (nonatomic, strong) NSString *content;
+@property (nonatomic, strong, nullable) NSString *content;
 /// url content
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong, nullable) NSString *url;
 /// Images<UIImage || NSString(url)>
-@property (nonatomic, strong) NSArray <id> *shareImages;
+@property (nonatomic, strong, nullable) NSArray <id> *shareImages;
+/// Share channel
+@property (nonatomic, assign) SSShareChannel channel;
+/// Wechat mini program (class WXMiniProgramObject)
+@property (nonatomic, strong, nullable) id wxMiniProgramObject;
 
 @end
 
-@protocol SSAuthCredential <NSObject>
+@protocol ISSAuthCredential <NSObject>
 /// Access token
-@property (nonatomic, strong) NSString *token;
+@property (nonatomic, strong) NSString *accessToken;
 /// Token expireDate
 @property (nonatomic, strong) NSDate *estimatedExpireDate;
 /// Platform
 @property (nonatomic, assign) SSPlatform platform;
 /// Other info
-@property (nonatomic, strong) NSDictionary *extraInfo;
+@property (nonatomic, strong, nullable) NSDictionary *extraInfo;
 
 @end
 
-@protocol SSUserInfo <NSObject>
+@protocol ISSUserInfo <NSObject>
 /// Nick
-@property (nonatomic, strong) NSString *nickname;
+@property (nonatomic, strong, nullable) NSString *nickname;
 /// UserId
 @property (nonatomic, strong) NSString *uid;
 /// Avatar url
-@property (nonatomic, strong) NSString *avatarUrl;
+@property (nonatomic, strong, nullable) NSString *avatarUrl;
 /// Gender
 @property (nonatomic, assign) SSUserGender gender;
 /// Signature
-@property (nonatomic, strong) NSString *signature;
+@property (nonatomic, strong, nullable) NSString *signature;
 
 @end
 
 @protocol ISSPlatformConfiguration <NSObject>
 
-- (void)setWechatAppId:(NSString *)appId;
-- (void)setWeiboAppKey:(NSString *)weiboAppKey secret:(NSString *)secret redirectUrl:(NSString *)redirectUrl authPolicy:(SSAuthPolicy)authPolicy;
+- (BOOL)setApplication:(UIApplication *)application launchOptions:(NSDictionary *)launchOptions;
+- (BOOL)setWechatAppId:(NSString *)appId secret:(NSString *)secret;
+- (BOOL)setWeiboAppKey:(NSString *)appKey secret:(NSString *)secret redirectUrl:(NSString *)redirectUrl authPolicy:(SSAuthPolicy)authPolicy;
+- (BOOL)setQQAppId:(NSString *)appId secret:(NSString *)secret;
+- (BOOL)setGoogleClientId:(NSString *)clientId;
+- (BOOL)setInstagramClientId:(NSString *)clientId redirectUrl:(NSString *)redirectUrl;
+- (BOOL)setTwitterConsumerKey:(NSString *)consumerKey secret:(NSString *)secret redirectUrl:(NSString *)redirectUrl;
+- (BOOL)setTwitchClientId:(NSString *)clientId secret:(NSString *)secret redirectUrl:(NSString *)redirectUrl;
+- (BOOL)setVKAppId:(NSString *)appId;
+- (BOOL)setRedditClientId:(NSString *)clientId redirectUrl:(NSString *)redirectUrl;
 
 @end
+
+typedef void(^SSAuthCompletion)(_Nullable id<ISSAuthCredential>,  NSError * _Nullable );
+typedef void(^SSRequestUserInfoCompletion)(_Nullable id<ISSUserInfo>,  NSError * _Nullable );
+typedef void(^SSShareCompletion)(BOOL,  NSError * _Nullable );
 
 @protocol SSInterfaces <NSObject>
 
@@ -110,37 +145,37 @@ typedef NS_ENUM(NSUInteger, SSUserGender){
  * Sharing
  */
 - (void)shareToChannel:(SSShareChannel)channel
-                  info:(id<SSShareInfo>)info
-            completion:(void(^)(BOOL success, NSError *error))completion;
+                  info:(id<ISSShareInfo>)info
+            completion:(SSShareCompletion)completion;
 
 
 /**
  * Authentication
  */
 - (void)requestAuthForPlatform:(SSPlatform)platform
-                    extendInfo:(NSDictionary *)extendInfo
-                completion:(void(^)(id<SSAuthCredential> credential, NSError *error))completion;
+                    parameters:(NSDictionary *)parameters
+                completion:(SSAuthCompletion)completion;
 
 
 /**
  * Request user info
  */
 - (void)requestUserInfoForPlatform:(SSPlatform)platform
-                        completion:(void(^)(id<SSUserInfo> userInfo, NSError *error))completion;
+                        completion:(SSRequestUserInfoCompletion)completion;
 
 /**
  * Clean auth
  */
-- (void)cleanAuthCacheForPlatforms:(SSPlatform)platforms;
+- (void)cleanAuthForPlatforms:(SSPlatform)platforms;
 
 
 /// Redirection
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApp annotation:(id)annotation;
 /// Redirection
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
-/// Redirection
-- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* SSInterfaces_h */
