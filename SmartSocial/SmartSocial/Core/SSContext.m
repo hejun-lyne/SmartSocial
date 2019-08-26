@@ -37,13 +37,14 @@ NSString * const SSScopesKey = @"scopes";
     self = [super init];
     if (self) {
         adaptors = [NSMutableDictionary dictionary];
+        channelAdaptors = [NSMutableDictionary dictionary];
     }
     return self;
 }
 
 - (id<ISSPlatformConfiguration>)platformConfiguration
 {
-    if (_configuration) {
+    if (_configuration == nil) {
         _configuration = [SSPlatformConfiguration new];
     }
     return _configuration;

@@ -14,6 +14,4 @@ FOUNDATION_EXPORT double SmartSocialVersionNumber;
 //! Project version string for SmartSocial.
 FOUNDATION_EXPORT const unsigned char SmartSocialVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <SmartSocial/PublicHeader.h>
-
-
+#import <SmartSocial/SSInterfaces.h>

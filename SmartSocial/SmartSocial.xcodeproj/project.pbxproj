@@ -49,6 +49,7 @@
 		795F7ED1230FE9F600C7A50C /* SSLineAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7ECF230FE9F600C7A50C /* SSLineAdaptor.m */; };
 		795F7ED5230FEF8A00C7A50C /* SSRedditAdaptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7ED3230FEF8A00C7A50C /* SSRedditAdaptor.h */; };
 		795F7ED6230FEF8A00C7A50C /* SSRedditAdaptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 795F7ED4230FEF8A00C7A50C /* SSRedditAdaptor.m */; };
+		795F7ED723136D9700C7A50C /* SSInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = 795F7E6C230D339F00C7A50C /* SSInterfaces.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8F60B2C069C43BF304DD1173 /* libPods-SmartSocial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E0088FC141F09BB3AA60DD0 /* libPods-SmartSocial.a */; };
 /* End PBXBuildFile section */
 
@@ -337,6 +338,7 @@
 				795F7ECB230FDA1800C7A50C /* SSVKAdaptor.h in Headers */,
 				795F7E88230E7CBA00C7A50C /* SSPlatformConfiguration.h in Headers */,
 				795F7EBC230FBB7B00C7A50C /* SSGoogleAdaptor.h in Headers */,
+				795F7ED723136D9700C7A50C /* SSInterfaces.h in Headers */,
 				795F7ED5230FEF8A00C7A50C /* SSRedditAdaptor.h in Headers */,
 				795F7E83230E3F0000C7A50C /* SSWechatAdaptor.h in Headers */,
 				795F7EC6230FC9A800C7A50C /* SSTwitterAdaptor.h in Headers */,

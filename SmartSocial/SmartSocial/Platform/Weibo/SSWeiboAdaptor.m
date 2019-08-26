@@ -64,18 +64,18 @@
         self.shareCompletion(NO, MakeError(ShareDomain, SSAuthErrorCodeBusy, @{@"reason" : @"The Last Share Actions hasn't complete yet!"}));
     }
     
-    if (![self.credential isTokenValid]) {
-        __weak __typeof(self)weakSelf = self;
-        self.authCompletion = ^(id<ISSAuthCredential> _Nullable c, NSError * _Nullable e) {
-            if (c == nil) {
-                weakSelf.shareCompletion(NO, e);
-            } else {
-                [weakSelf shareInfo:info];
-            }
-        };
-        [self requestAuthWithParameters:nil];
-        return;
-    }
+//    if (![self.credential isTokenValid]) {
+//        __weak __typeof(self)weakSelf = self;
+//        self.authCompletion = ^(id<ISSAuthCredential> _Nullable c, NSError * _Nullable e) {
+//            if (c == nil) {
+//                weakSelf.shareCompletion(NO, e);
+//            } else {
+//                [weakSelf shareInfo:info];
+//            }
+//        };
+//        [self requestAuthWithParameters:nil];
+//        return;
+//    }
     
     WBMessageObject *msgObject = [WBMessageObject message];
     msgObject.text = info.content;
@@ -104,6 +104,7 @@
 
 - (void)shareImages:(NSArray<UIImage *> *)images messageObject:(WBMessageObject *)messageObject
 {
+    self.sharing = YES;
     WBImageObject *imgObject = [WBImageObject object];
     imgObject.delegate = self;
     messageObject.imageObject = imgObject;
@@ -115,7 +116,6 @@
         return;
     }
     
-    self.sharing = YES;
     //辣鸡微博不会按 images 数组顺序分享
     [imgObject addImages:images];
     // 在回调里面 sendRequest
@@ -192,7 +192,12 @@
         WBAuthorizeResponse *weiboAuthResponse = (WBAuthorizeResponse *)response;
         if (response.statusCode != WeiboSDKResponseStatusCodeSuccess) {
             NSString *reason = [NSString stringWithFormat:@"WeiboStatusCode: %ld", (long)response.statusCode];
-            self.authCompletion(nil, MakeError(AuthDomain, SSAuthErrorCodeUnknown, @{@"reason": reason}));
+            if (self.authing) {
+                self.authCompletion(nil, MakeError(AuthDomain, SSAuthErrorCodeUnknown, @{@"reason": reason}));
+            } else if (self.sharing) {
+                self.shareCompletion(NO, MakeError(AuthDomain, response.statusCode == WeiboSDKResponseStatusCodeUserCancel ? SSAuthErrorCodeCancelled : SSAuthErrorCodeUnknown, @{@"reason": reason}));
+            }
+            return;
         }
         
         SSAuthCredential *credential = [SSAuthCredential new];

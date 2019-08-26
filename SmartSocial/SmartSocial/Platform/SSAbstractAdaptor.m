@@ -69,16 +69,6 @@ NSString * SSHMACSHA1(NSString *sign, NSString *data) {
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
-- (void)clear
-{
-    
-}
-
-- (void)applicationDidBecomeActive
-{
-    MustOverrideMethod
-}
-
 - (void)requestAuthWithParameters:(NSDictionary *)params
 {
     MustOverrideMethod
@@ -94,15 +84,15 @@ NSString * SSHMACSHA1(NSString *sign, NSString *data) {
     MustOverrideMethod
 }
 
+- (void)applicationDidBecomeActive {}
+
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApp annotation:(id)annotation
 {
-    MustOverrideMethod
     return NO;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options
 {
-    MustOverrideMethod
     return NO;
 }
 

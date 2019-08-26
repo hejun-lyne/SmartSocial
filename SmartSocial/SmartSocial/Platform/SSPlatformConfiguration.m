@@ -7,18 +7,6 @@
 //
 
 #import "SSPlatformConfiguration.h"
-#import "SSWechatAdaptor.h"
-#import "SSWeiboAdaptor.h"
-#import "SSQQAdaptor.h"
-#import "SSFacebookAdaptor.h"
-#import "SSWhatsAppAdaptor.h"
-#import "SSTwitchAdaptor.h"
-#import "SSGoogleAdaptor.h"
-#import "SSInstagramAdaptor.h"
-#import "SSTwitterAdaptor.h"
-#import "SSVKAdaptor.h"
-#import "SSLineAdaptor.h"
-#import "SSRedditAdaptor.h"
 #import "SSContext.h"
 
 @implementation SSPlatformConfiguration
@@ -29,19 +17,22 @@
     _launchOptions = launchOptions;
     
     // Facebook
-    SSFacebookAdaptor *fbAdaptor = [SSFacebookAdaptor new];
+    Class fbClass = NSClassFromString(@"SSFacebookAdaptor");
+    id fbAdaptor = [fbClass new];
     if (fbAdaptor != nil) {
         [SSContext.shared registerAdaptor:fbAdaptor forPlatform:SSPlatformFacebook channels:@[@(SSShareChannelFacebook)]];
     }
     
     // Whatsapp
-    SSWhatsAppAdaptor *waAdaptor = [SSWhatsAppAdaptor new];
+    Class waClass = NSClassFromString(@"SSWhatsAppAdaptor");
+    id waAdaptor = [waClass new];
     if (waAdaptor != nil) {
         [SSContext.shared registerAdaptor:waAdaptor forPlatform:SSPlatformWhatsApp channels:@[@(SSShareChannelWhatsApp)]];
     }
     
     // Line
-    SSLineAdaptor *liAdaptor = [SSLineAdaptor new];
+    Class liClass = NSClassFromString(@"SSLineAdaptor");
+    id liAdaptor = [liClass new];
     if (liAdaptor != nil) {
         [SSContext.shared registerAdaptor:liAdaptor forPlatform:SSPlatformLine channels:@[@(SSShareChannelLine)]];
     }
@@ -53,7 +44,8 @@
     _wechatAppId = wechatAppId;
     _weiboSecret = secret;
     
-    SSWechatAdaptor *adaptor = [SSWechatAdaptor new];
+    Class clazz = NSClassFromString(@"SSWechatAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -68,7 +60,8 @@
     _weiboRedirectUrl = redirectUrl;
     _weiboAuthPolicy = authPolicy;
     
-    SSWeiboAdaptor *adaptor = [SSWeiboAdaptor new];
+    Class clazz = NSClassFromString(@"SSWeiboAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -81,7 +74,8 @@
     _qqAppId = appId;
     _qqAppSecret = secret;
     
-    SSQQAdaptor *adaptor = [SSQQAdaptor new];
+    Class clazz = NSClassFromString(@"SSQQAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -93,7 +87,8 @@
 {
     _gooClientId = clientId;
     
-    SSGoogleAdaptor *adaptor = [SSGoogleAdaptor new];
+    Class clazz = NSClassFromString(@"SSGoogleAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -106,7 +101,8 @@
     _instagramClientId = clientId;
     _instagramRedirectUrl = redirectUrl;
     
-    SSInstagramAdaptor *adaptor = [SSInstagramAdaptor new];
+    Class clazz = NSClassFromString(@"SSInstagramAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -120,7 +116,8 @@
     _twitterSecret = secret;
     _twitterRedirectUrl = redirectUrl;
     
-    SSTwitterAdaptor *adaptor = [SSTwitterAdaptor new];
+    Class clazz = NSClassFromString(@"SSTwitterAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -134,7 +131,8 @@
     _twitchSecret = secret;
     _twitchRedirectUrl = redirectUrl;
     
-    SSTwitchAdaptor *adaptor = [SSTwitchAdaptor new];
+    Class clazz = NSClassFromString(@"SSTwitchAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -146,7 +144,8 @@
 {
     _vkId = appId;
     
-    SSVKAdaptor *adaptor = [SSVKAdaptor new];
+    Class clazz = NSClassFromString(@"SSVKAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }
@@ -159,7 +158,8 @@
     _redClientId = clientId;
     _redRedirectUrl = redirectUrl;
     
-    SSRedditAdaptor *adaptor = [SSRedditAdaptor new];
+    Class clazz = NSClassFromString(@"SSRedditAdaptor");
+    id adaptor = [clazz new];
     if (adaptor == nil) {
         return NO;
     }

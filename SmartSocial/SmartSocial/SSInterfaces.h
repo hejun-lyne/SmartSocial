@@ -130,9 +130,9 @@ extern NSString * const SSScopesKey;
 
 @end
 
-typedef void(^SSAuthCompletion)(_Nullable id<ISSAuthCredential>,  NSError * _Nullable );
-typedef void(^SSRequestUserInfoCompletion)(_Nullable id<ISSUserInfo>,  NSError * _Nullable );
-typedef void(^SSShareCompletion)(BOOL,  NSError * _Nullable );
+typedef void(^SSAuthCompletion)(_Nullable id<ISSAuthCredential> credential,  NSError * _Nullable error);
+typedef void(^SSRequestUserInfoCompletion)(_Nullable id<ISSUserInfo> userInfo,  NSError * _Nullable error);
+typedef void(^SSShareCompletion)(BOOL success,  NSError * _Nullable error);
 
 @protocol SSInterfaces <NSObject>
 
@@ -153,7 +153,7 @@ typedef void(^SSShareCompletion)(BOOL,  NSError * _Nullable );
  * Authentication
  */
 - (void)requestAuthForPlatform:(SSPlatform)platform
-                    parameters:(NSDictionary *)parameters
+                    parameters:(nullable NSDictionary *)parameters
                 completion:(SSAuthCompletion)completion;
 
 
@@ -170,9 +170,9 @@ typedef void(^SSShareCompletion)(BOOL,  NSError * _Nullable );
 
 
 /// Redirection
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApp annotation:(id)annotation;
+- (BOOL)application:(nullable UIApplication *)application handleOpenURL:(NSURL *)url sourceApplication:(nullable NSString *)sourceApp annotation:(nullable id)annotation;
 /// Redirection
-- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
+- (BOOL)application:(nullable UIApplication *)app openURL:(NSURL *)url options:(nullable NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options;
 
 @end
 

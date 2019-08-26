@@ -164,7 +164,8 @@
         });
         login.defaultAudience = FBSDKDefaultAudienceEveryone;
     }
-    [login logInWithPermissions:@[publicProfilePermission] fromViewController:self.topViewController handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
+    
+    [login logInWithReadPermissions:@[publicProfilePermission] fromViewController:self.topViewController handler:^(FBSDKLoginManagerLoginResult *result, NSError *error) {
         if (error || result.isCancelled) {
             NSString *reason = [NSString stringWithFormat:@"Error: %@", error];
             self.authCompletion(nil, MakeError(AuthDomain, result.isCancelled ? SSAuthErrorCodeCancelled : SSAuthErrorCodeUnknown, @{@"reason": reason}));
@@ -183,12 +184,10 @@
                                  initWithTokenString:credential.accessToken
                                  permissions:credential.fbGrantedPermissions
                                  declinedPermissions:credential.fbDeclinedPermissions
-                                 expiredPermissions:@[]
                                  appID:credential.fbAppId
                                  userID:credential.fbUserId
                                  expirationDate:credential.estimatedExpireDate
-                                 refreshDate:credential.fbTokenRefreshDate
-                                 dataAccessExpirationDate:nil];
+                                 refreshDate:credential.fbTokenRefreshDate];
     [FBSDKAccessToken setCurrentAccessToken:fbtoken];
     [FBSDKAccessToken refreshCurrentAccessToken:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
         if (error) {
